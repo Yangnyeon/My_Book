@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/board_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16sp"
+                    android:fontFamily="@font/jua"
+                    android:text="제목"
+                    android:textColor="#000000"
+                    android:textSize="30sp"></TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/board_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16sp"
+                        android:layout_marginTop="85sp"
+                        android:fontFamily="@font/jua"
+                        android:text="2022-05-20"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/eye_holder_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="85sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_toRightOf="@id/board_date"
+                        android:fontFamily="@font/jua"
+                        android:gravity="right"
+                        android:text="조회수 : 0"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:textStyle="bold"></TextView>
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/board_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginTop="60sp"
+                    android:fontFamily="@font/jua"
+                    android:text="닉네임"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"></TextView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/content_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="110sp"
+                    android:backgroundTint="#00000000">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"
+                        android:backgroundTint="#00000000">
+
+                        <TextView
+                            android:id="@+id/board_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/jua"
+                            android:padding="16sp"
+                            android:text="내용 블라블라"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/real_holder_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/board_content">
+                        </ImageView>
+
+
+                        <ImageView
+                            android:id="@+id/liked"
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:layout_below="@id/real_holder_image"
+                            android:layout_margin="16sp"
+                            android:src="@drawable/ic_baseline_thumb_up_24"
+                            android:visibility="invisible"></ImageView>
+
+
+                        <ImageView
+                            android:id="@+id/notliked"
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:layout_below="@id/real_holder_image"
+                            android:layout_marginStart="16sp"
+                            android:layout_marginTop="16sp"
+                            android:layout_marginEnd="16sp"
+                            android:layout_marginBottom="16sp"
+                            android:src="@drawable/ic_baseline_thumb_up_off_alt_24"
+                            android:visibility="visible"></ImageView>
+
+
+                        <TextView
+                            android:id="@+id/likes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/real_holder_image"
+                            android:layout_marginTop="20sp"
+                            android:layout_toRightOf="@id/notliked"
+                            android:fontFamily="@font/jua"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"></TextView>
+
+
+                        <ImageView
+                            android:id="@+id/content_delete"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:layout_below="@id/real_holder_image"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end|bottom"
+                            android:layout_marginStart="16sp"
+                            android:layout_marginTop="16sp"
+                            android:layout_marginEnd="16sp"
+                            android:layout_marginBottom="16sp"
+                            android:src="@drawable/ic_baseline_delete_24"
+                            android:visibility="visible"></ImageView>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <View
+                    android:id="@+id/content_holder_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_below="@+id/content_holder"
+                    android:background="#757171" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_community_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/content_holder_line"></androidx.recyclerview.widget.RecyclerView>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_margin="10dp"
+            android:hint="댓글 입력"
+            android:id="@+id/comment_edit"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            app:cardCornerRadius="16sp"
+            android:id="@+id/commnet_button"
+            android:backgroundTint="#03A9F4"
+            android:layout_marginTop="10sp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="입력"
+                android:fontFamily="@font/jua"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+</LinearLayout>

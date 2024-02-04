@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="1sp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            android:textSize="16sp"
+            android:text="댓글"
+            android:paddingLeft="9sp"
+            android:id="@+id/comment123"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:fontFamily="@font/jua"
+            android:layout_toLeftOf="@id/comment_delete"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            android:textSize="20sp"
+            android:text="게시물 doc"
+            android:paddingLeft="9sp"
+            android:id="@+id/content_doc"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:fontFamily="@font/jua"
+            android:visibility="invisible"
+            ></TextView>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:layout_gravity="end"
+            android:id="@+id/comment_delete"
+            android:layout_marginTop="16sp"
+            android:visibility="visible"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30sp"
+            ></ImageView>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="시간"
+            android:paddingLeft="9sp"
+            android:id="@+id/comment_date123"
+            android:layout_marginTop="60sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginBottom="16sp"
+            android:fontFamily="@font/jua"
+            ></TextView>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16sp"
+            android:layout_toLeftOf="@id/Comment_thumb_count"
+            >
+
+
+
+        </FrameLayout>
+
+
+        <ImageView
+            android:id="@+id/thumb_liked"
+            android:layout_width="15sp"
+            android:layout_height="15sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16sp"
+            android:layout_toLeftOf="@id/Comment_thumb_count"
+            android:src="@drawable/ic_baseline_thumb_up_24"
+            android:visibility="visible"
+            ></ImageView>
+
+
+        <ImageView
+            android:id="@+id/thumb_notliked"
+            android:layout_width="15sp"
+            android:layout_height="15sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16sp"
+            android:layout_toLeftOf="@id/Comment_thumb_count"
+            android:src="@drawable/ic_baseline_thumb_up_off_alt_24"
+            android:visibility="visible"></ImageView>
+
+
+        <TextView
+            android:id="@+id/Comment_thumb_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3sp"
+            android:layout_marginBottom="16sp"
+            android:layout_toLeftOf="@id/comment_nickname"
+            android:fontFamily="@font/jua"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5sp"
+            android:text="0"
+            android:textColor="#000000"
+            android:visibility="visible"></TextView>
+
+        <TextView
+            android:id="@+id/comment_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="60sp"
+            android:layout_marginRight="30sp"
+            android:layout_weight="1"
+            android:fontFamily="@font/jua"
+            android:paddingLeft="9sp"
+            android:text="닉네임"
+            android:textSize="13sp"></TextView>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
