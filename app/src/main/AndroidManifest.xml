@@ -18,6 +18,18 @@
         android:theme="@style/Theme.MyBook"
         tools:targetApi="31">
         <activity
+            android:name=".book_Dailog"
+            android:exported="false" />
+        <activity
+            android:name=".OnItemClick"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.Reservation_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".community.community_Write"
             android:exported="false" />
         <activity
@@ -42,7 +54,7 @@
             android:name=".activity_enter"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".IntroScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

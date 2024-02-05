@@ -1,35 +1,29 @@
 package com.example.mybook
 
-import android.content.Intent
-import android.opengl.Visibility
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
+import androidx.lifecycle.ViewModelProvider
 import com.example.mybook.databinding.ActivityBookBinding
-import com.example.mybook.databinding.ActivityMainBinding
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.Query
 
-class book_Activity : AppCompatActivity() {
+class book_Activity : AppCompatActivity(), OnItemClick, book_Adapter.OnItemClick  {
 
     private var mBinding: ActivityBookBinding? = null
     private val binding get() = mBinding!!
 
     val content_List = ArrayList<String>()
 
+    private lateinit var book_ViewModelVar: book_ViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivityBookBinding.inflate(layoutInflater)
 
-        val animation = AnimationUtils.loadAnimation(this, R.anim.page_flip)
-
-        //  https://github.com/wajahatkarim3/EasyFlipViewPager 이거씀
         binding.gopage.setOnClickListener {
             startScaleDownAnimation()
         }
@@ -89,8 +83,30 @@ class book_Activity : AppCompatActivity() {
 
         })
 
+        binding.contentReservation.setOnClickListener {
+            val memo_dialog = book_Dailog(this,this, binding.bookContent.text.toString())
+            memo_dialog.show()
+        }
+
+        val repository = book_Repository(this.application)
+
+        val viewModelFactory = book_Factory(repository)
+        book_ViewModelVar = ViewModelProvider(this, viewModelFactory)[book_ViewModel::class.java]
+
+
         binding.bookMain.startAnimation(pagingStartAnim)
     }
+
+    override fun deleteTodo(book: Book_Model) {
+        book_ViewModelVar.delete(book)
+    }
+
+    override fun check_memo(content: String, dialog: Dialog) {
+        book_ViewModelVar.insert(Book_Model(content))
+        Toast.makeText(this,"저장되었습니다...", Toast.LENGTH_SHORT).show()
+        dialog.dismiss()
+    }
+
 
 
 }

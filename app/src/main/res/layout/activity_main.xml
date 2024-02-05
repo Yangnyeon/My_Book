@@ -162,7 +162,7 @@
               android:layout_height="60sp"
               app:cardCornerRadius="16sp"
               android:layout_marginLeft="20sp"
-
+              android:id="@+id/reservation_Gogo"
               >
 
             <LinearLayout

@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mybook.community.community_Activity
 import com.example.mybook.databinding.ActivityMainBinding
+import com.example.mybook.reservation.Reservation_Activity
 import java.io.*
 import java.net.InetAddress
 import java.net.Socket
@@ -43,6 +44,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.communityGogo.setOnClickListener {
             startActivity(Intent(this@MainActivity, community_Activity::class.java))
+        }
+
+        binding.reservationGogo.setOnClickListener {
+            startActivity(Intent(this@MainActivity, Reservation_Activity::class.java))
         }
 
         setContentView(binding.root)

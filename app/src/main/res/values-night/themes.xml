@@ -11,14 +11,12 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsTranslucent">true</item>​
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="ActivityAnimation">
-        <item name="android:activityOpenEnterAnimation">@anim/page_flip</item>
-        <item name="android:activityOpenExitAnimation">@anim/page_flip_reverse</item>
-        <item name="android:activityCloseEnterAnimation">@anim/page_flip_reverse</item>
-        <item name="android:activityCloseExitAnimation">@anim/page_flip</item>
-    </style>
+
 
 </resources>
