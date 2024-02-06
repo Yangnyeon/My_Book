@@ -32,11 +32,11 @@ class MainActivity : AppCompatActivity() {
 
         val videoUri = Uri.parse("android.resource://" + packageName + "/" + R.raw.production);
 
-        binding.videoView.setVideoURI(videoUri);
+ /*       binding.videoView.setVideoURI(videoUri);
         binding.videoView.start();
         binding.videoView.setOnPreparedListener(MediaPlayer.OnPreparedListener { mp ->
             mp.isLooping = true // 동영상 무한 반복. 반복을 원치 않을 경우 false
-        })
+        })*/
 
         binding.bookGogo.setOnClickListener {
             startActivity(Intent(this@MainActivity, book_Activity::class.java))
@@ -55,10 +55,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        binding.videoView.start();
+     /*   binding.videoView.start();
         binding.videoView.setOnPreparedListener(MediaPlayer.OnPreparedListener { mp ->
             mp.isLooping = true
-        })
+        })*/
     }
 
 

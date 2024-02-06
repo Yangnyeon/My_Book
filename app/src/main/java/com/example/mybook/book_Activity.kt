@@ -101,11 +101,13 @@ class book_Activity : AppCompatActivity(), OnItemClick, book_Adapter.OnItemClick
         book_ViewModelVar.delete(book)
     }
 
-    override fun check_memo(content: String, dialog: Dialog) {
-        book_ViewModelVar.insert(Book_Model(content))
+    override fun check_memo(content: String, book_Edit: String, dialog: Dialog) {
+        book_ViewModelVar.insert(Book_Model(content,book_Edit))
         Toast.makeText(this,"저장되었습니다...", Toast.LENGTH_SHORT).show()
         dialog.dismiss()
     }
+
+
 
 
 

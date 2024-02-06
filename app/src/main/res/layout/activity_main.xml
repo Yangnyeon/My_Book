@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    >
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
 
   <RelativeLayout
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
-      android:backgroundTint="#000000"
-      android:background="#000000"
+      android:background="@drawable/books"
       >
 
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-    </VideoView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,7 +54,7 @@
 
           <androidx.cardview.widget.CardView
               android:layout_width="200sp"
-              android:layout_height="60sp"
+              android:layout_height="50sp"
               app:cardCornerRadius="16sp"
               android:layout_marginLeft="20sp"
               android:id="@+id/book_gogo"
@@ -69,7 +62,7 @@
 
             <LinearLayout
                 android:layout_width="200sp"
-                android:layout_height="60sp"
+                android:layout_height="50sp"
                 android:background="@drawable/texture"
                 >
 
@@ -110,7 +103,7 @@
 
           <androidx.cardview.widget.CardView
               android:layout_width="200sp"
-              android:layout_height="60sp"
+              android:layout_height="50sp"
               app:cardCornerRadius="16sp"
               android:layout_marginLeft="20sp"
               android:id="@+id/community_Gogo"
@@ -118,7 +111,7 @@
 
             <LinearLayout
                 android:layout_width="200sp"
-                android:layout_height="60sp"
+                android:layout_height="50sp"
                 android:background="@drawable/texture"
                 >
 
@@ -159,7 +152,7 @@
 
           <androidx.cardview.widget.CardView
               android:layout_width="200sp"
-              android:layout_height="60sp"
+              android:layout_height="50sp"
               app:cardCornerRadius="16sp"
               android:layout_marginLeft="20sp"
               android:id="@+id/reservation_Gogo"
@@ -167,7 +160,7 @@
 
             <LinearLayout
                 android:layout_width="200sp"
-                android:layout_height="60sp"
+                android:layout_height="50sp"
                 android:background="@drawable/texture"
                 >
 
@@ -207,7 +200,7 @@
 
           <androidx.cardview.widget.CardView
               android:layout_width="200sp"
-              android:layout_height="60sp"
+              android:layout_height="50sp"
               app:cardCornerRadius="16sp"
               android:layout_marginLeft="20sp"
 
@@ -215,7 +208,7 @@
 
             <LinearLayout
                 android:layout_width="200sp"
-                android:layout_height="60sp"
+                android:layout_height="50sp"
                 android:background="@drawable/texture"
                 >
 
@@ -260,4 +253,4 @@
   </RelativeLayout>
 
 
-</layout>
+</LinearLayout>
