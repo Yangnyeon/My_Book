@@ -99,6 +99,12 @@ dependencies {
     // LiveData - 데이터의 변경 사항을 알 수 있음
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+
+    implementation "androidx.fragment:fragment-ktx:1.1.0"
+
     implementation 'com.github.applikeysolutions:cosmocalendar:1.0.4'
 
 

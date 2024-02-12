@@ -5,252 +5,262 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/pager_Screen"
+    android:background="#DFDBDB"
    >
 
-  <RelativeLayout
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:background="@drawable/books"
-      >
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        android:orientation="vertical"
-        >
-
-
-      <ImageView
-          android:layout_width="match_parent"
-          android:layout_height="250sp"
-          android:src="@drawable/mainscreen"
-          android:id="@+id/test_single_gogo"
-          android:layout_gravity="center"
-          android:layout_marginTop="10sp"
-          ></ImageView>
-
-
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="vertical"
-        >
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity"
+            android:orientation="vertical"
             >
 
-          <ImageView
-              android:layout_width="40sp"
-              android:layout_height="40sp"
-              android:src="@drawable/a_book"
-              ></ImageView>
-
-          <androidx.cardview.widget.CardView
-              android:layout_width="200sp"
-              android:layout_height="50sp"
-              app:cardCornerRadius="16sp"
-              android:layout_marginLeft="20sp"
-              android:id="@+id/book_gogo"
-              >
-
-            <LinearLayout
-                android:layout_width="200sp"
-                android:layout_height="50sp"
-                android:background="@drawable/texture"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
                 >
 
-              <TextView
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="책 피러 가기"
-                  android:textColor="#656262"
-                  android:layout_gravity="center_vertical"
-                  android:gravity="center"
-                  android:textSize="28sp"
-                  android:textStyle="bold"
-                  android:fontFamily="@font/jua"
-                  ></TextView>
+                <TextView
+                    android:id="@+id/intro_Message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginTop="16sp"
+                    android:layout_marginEnd="16sp"
+                    android:layout_marginBottom="16sp"
+                    android:fontFamily="@font/jua"
+                    android:text="Hello! 책님 도와주세요!\n어플로 고민을 상담해보세요!!"
+                    android:textColor="#000000"
+                    android:textSize="24sp"></TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/intro_Message"
+                    android:layout_marginTop="16sp"
+                    app:cardCornerRadius="16sp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="70sp"
+                        android:layout_height="70sp"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/app_icon"
+                            ></ImageView>
 
 
-            </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
 
-          </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="400sp"
+                android:orientation="horizontal"
+                app:cardCornerRadius="16sp"
+                android:layout_margin="16sp"
+                >
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager11"
+                    android:background="@drawable/pager_image3"
+                    android:layout_width="match_parent"
+                    android:layout_height="400sp">
+                </androidx.viewpager.widget.ViewPager>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/create_Intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150sp"
+                    android:layout_marginTop="8sp"
+                    android:layout_marginLeft="8sp"
+                    android:backgroundTint="#403E3E"
+                    app:cardCornerRadius="16sp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="70sp"
+                            android:layout_height="70sp"
+                            android:src="@drawable/hacker">
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="제작자"
+                            android:layout_marginTop="10sp"
+                            android:layout_gravity="center"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/jua"
+                            ></TextView>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="170sp"
+                    android:layout_toRightOf="@+id/create_Intro"
+                    android:id="@+id/horizontal_ScrollView"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="290sp"
+                            android:layout_height="150sp"
+                            app:cardCornerRadius="16sp"
+                            android:id="@+id/book_gogo"
+                            android:layout_margin="8sp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150sp"
+                                android:background="@drawable/home"
+                                >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="책 피러 가기"
+                                    android:textColor="#AAA4A4"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="left|bottom"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold"
+                                    android:layout_margin="16sp"
+                                    android:fontFamily="@font/jua"
+                                    ></TextView>
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="290sp"
+                            android:layout_height="150sp"
+                            app:cardCornerRadius="16sp"
+                            android:id="@+id/community_Gogo"
+                            android:layout_margin="8sp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150sp"
+                                android:background="@drawable/man"
+                                >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="익명 고민 상담"
+                                    android:textColor="#AAA4A4"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="left|bottom"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold"
+                                    android:layout_margin="16sp"
+                                    android:fontFamily="@font/jua"
+                                    ></TextView>
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="290sp"
+                            android:layout_height="150sp"
+                            app:cardCornerRadius="16sp"
+                            android:id="@+id/reservation_Gogo"
+                            android:layout_margin="8sp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150sp"
+                                android:background="@drawable/books"
+                                >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="저장소"
+                                    android:textColor="#AAA4A4"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="left|bottom"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold"
+                                    android:layout_margin="16sp"
+                                    android:fontFamily="@font/jua"
+                                    ></TextView>
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+            </RelativeLayout>
+
+
 
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="30sp"
-            >
-
-          <ImageView
-              android:layout_width="40sp"
-              android:layout_height="40sp"
-              android:src="@drawable/a_book"
-              ></ImageView>
-
-          <androidx.cardview.widget.CardView
-              android:layout_width="200sp"
-              android:layout_height="50sp"
-              app:cardCornerRadius="16sp"
-              android:layout_marginLeft="20sp"
-              android:id="@+id/community_Gogo"
-              >
-
-            <LinearLayout
-                android:layout_width="200sp"
-                android:layout_height="50sp"
-                android:background="@drawable/texture"
-                >
-
-              <TextView
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="커뮤니티"
-                  android:textColor="#656262"
-                  android:layout_gravity="center_vertical"
-                  android:gravity="center"
-                  android:textSize="28sp"
-                  android:textStyle="bold"
-                  android:fontFamily="@font/jua"
-                  ></TextView>
-
-
-            </LinearLayout>
-
-
-          </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="30sp"
-            >
-
-          <ImageView
-              android:layout_width="40sp"
-              android:layout_height="40sp"
-              android:src="@drawable/a_book"
-              ></ImageView>
-
-          <androidx.cardview.widget.CardView
-              android:layout_width="200sp"
-              android:layout_height="50sp"
-              app:cardCornerRadius="16sp"
-              android:layout_marginLeft="20sp"
-              android:id="@+id/reservation_Gogo"
-              >
-
-            <LinearLayout
-                android:layout_width="200sp"
-                android:layout_height="50sp"
-                android:background="@drawable/texture"
-                >
-
-              <TextView
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_gravity="center_vertical"
-                  android:fontFamily="@font/jua"
-                  android:gravity="center"
-                  android:text="저장목록"
-                  android:textColor="#656262"
-                  android:textSize="28sp"
-                  android:textStyle="bold"></TextView>
-
-
-            </LinearLayout>
-
-
-          </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="30sp"
-            >
-
-          <ImageView
-              android:layout_width="40sp"
-              android:layout_height="40sp"
-              android:src="@drawable/a_book"
-              ></ImageView>
-
-          <androidx.cardview.widget.CardView
-              android:layout_width="200sp"
-              android:layout_height="50sp"
-              app:cardCornerRadius="16sp"
-              android:layout_marginLeft="20sp"
-
-              >
-
-            <LinearLayout
-                android:layout_width="200sp"
-                android:layout_height="50sp"
-                android:background="@drawable/texture"
-                >
-
-              <TextView
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="제작자"
-                  android:textColor="#656262"
-                  android:layout_gravity="center_vertical"
-                  android:gravity="center"
-                  android:textSize="28sp"
-                  android:textStyle="bold"
-                  android:fontFamily="@font/jua"
-                  ></TextView>
-
-
-            </LinearLayout>
-
-
-          </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-
-
-
-
-
-
-      </LinearLayout>
-
-
-
-
-    </LinearLayout>
-
-
-
-
-
-  </RelativeLayout>
+  </ScrollView>
 
 
 </LinearLayout>
