@@ -16,7 +16,6 @@ class book_Activity : AppCompatActivity(), OnItemClick, book_Adapter.OnItemClick
     private var mBinding: ActivityBookBinding? = null
     private val binding get() = mBinding!!
 
-    val content_List = ArrayList<String>()
 
     private lateinit var book_ViewModelVar: book_ViewModel
 
@@ -84,7 +83,7 @@ class book_Activity : AppCompatActivity(), OnItemClick, book_Adapter.OnItemClick
         })
 
         binding.contentReservation.setOnClickListener {
-            val memo_dialog = book_Dailog(this,this, binding.bookContent.text.toString())
+            val memo_dialog = book_Dailog(this@book_Activity,this, binding.bookContent.text.toString())
             memo_dialog.show()
         }
 
@@ -107,8 +106,9 @@ class book_Activity : AppCompatActivity(), OnItemClick, book_Adapter.OnItemClick
         dialog.dismiss()
     }
 
-
-
+    override fun close_Dialog(dialog: Dialog) {
+        TODO("Not yet implemented")
+    }
 
 
 }

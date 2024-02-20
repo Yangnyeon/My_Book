@@ -1,0 +1,69 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    >
+
+        <LinearLayout
+            android:layout_width="350sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/dialog_background"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Developer"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="8sp"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/goodphoto"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="안녕 백령도"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="감스트 님의 책님을 보고 삘받아서 만든 어플입니다\n 재미로만 사용해주세요!"
+            android:fontFamily="@font/jua"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email : tmdgurdla324@naver.com "
+                    android:fontFamily="@font/jua"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_Close"
+            android:text="Contact"
+            android:layout_gravity="center"/>
+
+        </LinearLayout>
+</FrameLayout>

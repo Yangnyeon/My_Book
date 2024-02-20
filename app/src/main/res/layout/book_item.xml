@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+
+    <data>
+        <variable
+            name="book"
+            type="com.example.mybook.Book_Model" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardUseCompatPadding="true"
+        android:backgroundTint="#434343"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140sp"
+            android:orientation="vertical"
+            android:id="@+id/food_DataBackGround"
+            android:background="@drawable/banner"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="90sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{book.book_Edit}'
+                    android:fontFamily="@font/jua"
+                    android:padding="8sp"
+                    android:textSize="26sp"
+                    android:layout_marginLeft="16sp"
+                    android:textColor="#000000"
+                    android:id="@+id/DESC_KOR" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{book.content}'
+                    android:fontFamily="@font/nanumbrushscript"
+                    android:padding="8sp"
+                    android:textSize="26sp"
+                    android:layout_marginLeft="16sp"
+                    android:textColor="#000000"
+                    android:id="@+id/content"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16sp"
+                >
+
+                <ImageView
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+                    android:src="@drawable/trashcan"
+                    android:id="@+id/delete"
+                    ></ImageView>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
+
+

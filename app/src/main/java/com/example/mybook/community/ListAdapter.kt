@@ -13,6 +13,7 @@ import coil.load
 import coil.transform.CircleCropTransformation
 import com.bumptech.glide.Glide
 import com.example.mybook.R
+import com.example.mybook.databinding.BookItemBinding
 import com.example.mybook.databinding.ListLayoutBinding
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
@@ -21,7 +22,8 @@ import com.google.firebase.firestore.Query
 class ListAdapter (val itemList: ArrayList<community_Data>,val context: Context): RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_layout, parent, false)
+       val view = LayoutInflater.from(parent.context).inflate(R.layout.list_layout, parent, false)
+
         return ViewHolder(view)
     }
 

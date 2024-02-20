@@ -1,5 +1,6 @@
 package com.example.mybook
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -11,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.mybook.advice.*
 import com.example.mybook.community.community_Activity
+import com.example.mybook.create.create_Dialog
 import com.example.mybook.databinding.ActivityMainBinding
 import com.example.mybook.reservation.Reservation_Activity
 import kotlinx.coroutines.CoroutineScope
@@ -20,7 +22,7 @@ import kotlinx.coroutines.launch
 import java.io.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnItemClick, book_Adapter.OnItemClick  {
 
     private var mBinding : ActivityMainBinding ?= null
     private val binding get() = mBinding!!
@@ -48,13 +50,7 @@ class MainActivity : AppCompatActivity() {
                 delay(2000)
                 setPage()
             }
-        } //뷰페이저
-
- /*       binding.videoView.setVideoURI(videoUri);
-        binding.videoView.start();
-        binding.videoView.setOnPreparedListener(MediaPlayer.OnPreparedListener { mp ->
-            mp.isLooping = true // 동영상 무한 반복. 반복을 원치 않을 경우 false
-        })*/
+        }
 
         binding.bookGogo.setOnClickListener {
             startActivity(Intent(this@MainActivity, book_Activity::class.java))
@@ -62,6 +58,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.communityGogo.setOnClickListener {
             startActivity(Intent(this@MainActivity, community_Activity::class.java))
+            Toast.makeText(this, "준비중입니다!", Toast.LENGTH_SHORT).show()
         }
 
         binding.reservationGogo.setOnClickListener {
@@ -99,6 +96,14 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("제발", advice_List.toString())
 
+        binding.createIntro.setOnClickListener {
+            val create_dialog = create_Dialog(this,this)
+            create_dialog.show()
+        }
+
+/*        val memo_dialog = book_Dailog(this,this, binding.bookContent.text.toString())
+        memo_dialog.show()*/
+
         setContentView(binding.root)
     }
 
@@ -122,6 +127,20 @@ class MainActivity : AppCompatActivity() {
         val mAdapter = advice_Adapter(items, advice_Text)
         binding.viewpager11.adapter = mAdapter
     }
+
+    override fun deleteTodo(cloths: Book_Model) {
+        TODO("Not yet implemented")
+    }
+
+    override fun check_memo(content: String, book_Edit: String, dialog: Dialog) {
+        TODO("Not yet implemented")
+    }
+
+    override fun close_Dialog(dialog: Dialog) {
+        dialog.dismiss()
+    }
+
+
 
 
 }

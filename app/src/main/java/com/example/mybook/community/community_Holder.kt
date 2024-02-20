@@ -101,14 +101,6 @@ class community_Holder : AppCompatActivity() {
                         binding.likes.text = "${getLong("liked")}"
                         binding.eyeHolderCount.text = "조회수 : ${getLong("eye_count")}"
 
-                        /*
-                        Glide.with(this@Community_holder)
-                            .load("${getString("imageUrl")}")
-                            .fallback(null)
-                            .into(real_holder_image)
-
-                         */
-
                         binding.realHolderImage
                             .load("${getString("imageUrl")}"){
                                 placeholder(null)
